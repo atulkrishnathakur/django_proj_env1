@@ -23,3 +23,8 @@ $ source django_vir_env1/bin/activate ###guest user can run <br>
 (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango$ cd django_vir_env1_proj <br>
 
 (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ python3.9 manage.py runserver
+
+# How to connect workbench with mysql in ubuntu
+1. Install mysql
+2. Install mysql workbench from ubuntu software center
+3. atul@atul-Lenovo-G570:~$ sudo snap connect mysql-workbench-community:password-manager-service :password-manager-service ###if MySQLWorkbench is blocked by AppArmor
