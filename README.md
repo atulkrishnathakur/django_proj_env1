@@ -10,7 +10,9 @@ $ source django_vir_env1/bin/activate ###guest user can run <br>
 (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango$ 
 
 # How to install django in linux by guest user
-(django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango$ pip3 install django
+(django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango$ pip3 install django <br>
+<p> OR </p>
+(django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango$ pip3 install Django==4.0.5 ###with specific django version
 
 # How to check dejango version
 (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango$ django-admin --version
