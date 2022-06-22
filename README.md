@@ -4,7 +4,6 @@ $ sudo apt-get install python3.9-venv  ###administrator user will run <br>
 $ mkdir mydjango   ###guest user can run<br>
 $ cd mydjango ###guest user can run <br>
 $ python3.9 -m venv django_vir_env1 ###guest user can run <br>
-$ cd ../ ###guest user can run <br>
 $ source django_vir_env1/bin/activate ###guest user can run <br>
 
 <p>Now you can see</p>
