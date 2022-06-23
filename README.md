@@ -36,3 +36,20 @@ $ source django_vir_env1/bin/activate ###guest user can run <br>
 3. set personal access token if token not set (click the profile icon from right top corner > setting > Developer Settings > personal access token > Generate new token
 4. set the token in url (moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ git remote set-url origin https://ghp_qyPE2VCh8EqXlUkM7r0T2X@github.com/atulkrishnathakur/django_proj_env1.git)
 5. now you push your changes on github
+
+# How to create app 
+1. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ python3.9 manage.py startapp admin
+2. add "admin" app in setting.py file
+   # Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'admin',
+]
+
+
