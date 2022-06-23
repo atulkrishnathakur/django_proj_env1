@@ -33,4 +33,6 @@ $ source django_vir_env1/bin/activate ###guest user can run <br>
 # How to use git and github
 1. clone the repository from github.com in other location
 2. copy the .git folder and README.md file and paste it in root directory of your python project
-3. 
+3. set personal access token if token not set (click the profile icon from right top corner > setting > Developer Settings > personal access token > Generate new token
+4. set the token in url (moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ git remote set-url origin https://ghp_qyPE2VCh8EqXlUkM7r0T2X@github.com/atulkrishnathakur/django_proj_env1.git)
+5. now you push your changes on github
