@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'admin',
+    'myadmin',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +75,14 @@ WSGI_APPLICATION = 'django_vir_env1_proj.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'django_vir_env1_proj',  
+        'USER':'root',  
+        'PASSWORD':'123456789',  
+        'HOST':'localhost',  
+        'PORT':'3306'  
+    }  
 }
 
 
