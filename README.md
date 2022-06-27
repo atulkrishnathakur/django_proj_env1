@@ -56,7 +56,18 @@ INSTALLED_APPS = [
 3. Note "admin" is bydefault app created by django
 
 # Databas connectin with mysql
-1. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ pip3 install mysqlclient ##install mysqlcleint
-2.
+1. atul@atul-Lenovo-G570:~$ sudo sudo apt-get insall python3.9-dev build-essential ###If you get error when install mysqlclient
+2. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ pip3 install mysqlclient ###install myssqlclient
+3. DATABASES = {
+        'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'django_vir_env1_proj',  
+        'USER':'root',  
+        'PASSWORD':'123456789',  
+        'HOST':'localhost',  
+        'PORT':'3306'  
+    }  
+} ###set in setting.py file to connect mysql database
+
 
 
