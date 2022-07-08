@@ -72,8 +72,7 @@ INSTALLED_APPS = [
 # create templates in project root directory
 1. Create a templates directory in project root directory
 2. Now change the setting.py file for 
-
-TEMPLATES = [
+3. TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'templates', ],
@@ -92,8 +91,7 @@ TEMPLATES = [
 # crete static directory in project root directory
 1. create a static directory in project root directory
 2. Now change the setting.py file for
-
-STATICFILES_DIRS = [
+3. STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
