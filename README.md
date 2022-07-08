@@ -69,17 +69,25 @@ INSTALLED_APPS = [
     } 
 } ###set in setting.py file to connect mysql database
 
-# create tempolates in project root directory
+# create templates in project root directory
 1. Create a templates directory in project root directory
 2. Now change the setting.py file for 
 
 TEMPLATES = [
     {
-        ..........
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'templates', ],
-        .........................
-        
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
     },
+]
 
 # crete static directory in project root directory
 1. create a static directory in project root directory
