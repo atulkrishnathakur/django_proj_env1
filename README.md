@@ -66,8 +66,27 @@ INSTALLED_APPS = [
         'PASSWORD':'123456789',  
         'HOST':'localhost',  
         'PORT':'3306'  
-    }  
+    } 
 } ###set in setting.py file to connect mysql database
 
+# create tempolates in project root directory
+1. Create a templates directory in project root directory
+2. Now change the setting.py file for 
+
+TEMPLATES = [
+    {
+        ..........
+        'DIRS': [BASE_DIR / 'templates', ],
+        .........................
+        
+    },
+
+# crete static directory in project root directory
+1. create a static directory in project root directory
+2. Now change the setting.py file for
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 
