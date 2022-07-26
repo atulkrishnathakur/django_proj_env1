@@ -1,7 +1,17 @@
 from django.db import models
-from myadmin.models import Post
-from myadmin.models import product
-from myadmin.models import product2
-from myadmin.models import product3
-from myadmin.models import product4
 
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=50)
+    
+    class Meta:
+      db_table = 'person'
+      
+class Boys(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=50)
+    
+    class Meta:
+      db_table = 'boys'
+      app_label = 'myadmin'      
+      
