@@ -99,22 +99,22 @@ INSTALLED_APPS = [
 # how to write models.py file to create table name without concatenate app name in database table
 1. use the meta 
 
-from django.db import models
+from django.db import models <br><br>
 
-class Person(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=50)
+class Person(models.Model): <br>
+    first_name = models.CharField(max_length=30)<br>
+    last_name = models.CharField(max_length=50)<br><br>
     
-    class Meta:
-      db_table = 'person'
+    class Meta:<br>
+      db_table = 'person'<br><br>
       
-class Boys(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=50)
+class Boys(models.Model):<br>
+    first_name = models.CharField(max_length=100)<br>
+    last_name = models.CharField(max_length=50)<br><br>
     
-    class Meta:
-      db_table = 'boys'
-      app_label = 'myadmin'
+    class Meta:<br>
+      db_table = 'boys'<br>
+      app_label = 'myadmin'<br>
 
 
 # How to organize models in a package if you have many models 
@@ -125,14 +125,14 @@ class Boys(models.Model):
 5. write code in __init_.py file to import your model file. (Example: from myadmin.models import country)
 6. now write code in modle file ##write below code in in country.py
 
-from django.db import models
+from django.db import models<br><br>
 
-class Country(models.Model):
-    id = models.BigAutoField(primary_key=True, default=None)
-    country_name = models.CharField(max_length=255)
+class Country(models.Model):<br>
+    id = models.BigAutoField(primary_key=True, default=None)<br>
+    country_name = models.CharField(max_length=255)<br><br>
     
-    class Meta:
-      db_table = 'country'
+    class Meta:<br>
+      db_table = 'country'<br>
 
 7. db_table is attribute of Meta class
 8. if you not use db_table then django automatically concatenate app name with table name in database like myadmin_country
@@ -143,16 +143,16 @@ class Country(models.Model):
 1. create a model for state (state.py) in model directory
 2. write below code in state.py file
 
-from django.db import models
-from myadmin.models import country
+from django.db import models <br>
+from myadmin.models import country <br><br>
 
-class State(models.Model):
-    id = models.BigAutoField(primary_key=True, default=None)
-    state_name = models.CharField(max_length=255)
-    country_id = models.ForeignKey(country.Country,null=True,on_delete=models.SET_NULL,db_column='country_id')
+class State(models.Model):<br>
+    id = models.BigAutoField(primary_key=True, default=None)<br>
+    state_name = models.CharField(max_length=255)<br>
+    country_id = models.ForeignKey(country.Country,null=True,on_delete=models.SET_NULL,db_column='country_id')<br><br>
     
-    class Meta:
-      db_table = 'state'
+    class Meta:<br>
+      db_table = 'state'<br>
       
 2. when you create foreign key then django automatically add _id with column name 
 3. if you not use db_column then dajango create field with _id (example: country_id_id)
