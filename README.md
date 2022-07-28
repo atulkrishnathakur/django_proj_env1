@@ -142,7 +142,7 @@ class Country(models.Model):<br>
 
 1. create a model for state (state.py) in model directory
 2. write below code in state.py file
-
+  ```
    from django.db import models <br>
    from myadmin.models import country <br><br>
 
@@ -153,7 +153,8 @@ class Country(models.Model):<br>
     
      class Meta:<br>
        db_table = 'state'<br>
-      
+       
+ ```
 2. when you create foreign key then django automatically add _id with column name 
 3. if you not use db_column then dajango create field with _id (example: country_id_id)
 4. if you want create foreign key field name according to your need then use db_column it create custom field name
