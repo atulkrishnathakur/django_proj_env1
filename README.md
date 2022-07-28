@@ -117,6 +117,21 @@ class Boys(models.Model):
       app_label = 'myadmin'
 
 
+# How to organize models in a package if you have many models 
+1. delete models.py file
+2. create models directory in app
+3. create __init__.py file in models directory
+4. write code in __init_.py file to import your model file. Example: from myadmin.models import person
+5. now write code in modle file
+
+from django.db import models
+
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=50)
+    
+    class Meta:
+      db_table = 'person'
 
 
 
