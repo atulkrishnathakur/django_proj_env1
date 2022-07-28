@@ -120,18 +120,40 @@ class Boys(models.Model):
 # How to organize models in a package if you have many models 
 1. delete models.py file
 2. create models directory in app
-3. create __init__.py file in models directory
-4. write code in __init_.py file to import your model file. Example: from myadmin.models import person
-5. now write code in modle file
+3. create file in models directory (Example: country.py)
+4. create __init__.py file in models directory
+5. write code in __init_.py file to import your model file. (Example: from myadmin.models import country)
+6. now write code in modle file ##write below code in in country.py
 
 from django.db import models
 
-class Person(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=50)
+class Country(models.Model):
+    id = models.BigAutoField(primary_key=True, default=None)
+    country_name = models.CharField(max_length=255)
     
     class Meta:
-      db_table = 'person'
+      db_table = 'country'
 
+7. db_table is attribute of Meta class
+8. if you not use db_table then django automatically concatenate app name with table name in database like myadmin_country
+9. if you use db_table then you can create table name according to your need
 
+# How to create foreign key in django model
 
+1. create a model for state (state.py) in model directory
+2. write below code in state.py file
+
+from django.db import models
+from myadmin.models import country
+
+class State(models.Model):
+    id = models.BigAutoField(primary_key=True, default=None)
+    state_name = models.CharField(max_length=255)
+    country_id = models.ForeignKey(country.Country,null=True,on_delete=models.SET_NULL,db_column='country_id')
+    
+    class Meta:
+      db_table = 'state'
+      
+2. when you create foreign key then django automatically add _id with column name 
+3. if you not use db_column then dajango create field with _id (example: country_id_id)
+4. if you want create foreign key field name according to your need then use db_column it create custom field name
