@@ -40,7 +40,7 @@ $ source django_vir_env1/bin/activate ###guest user can run <br>
 # How to create app 
 1. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ python3.9 manage.py startapp myadmin
 2. add "myadmin" app in setting.py file
-
+```
    #Application definition
 
 INSTALLED_APPS = [
@@ -53,12 +53,14 @@ INSTALLED_APPS = [
     'myadmin',
 ]
 
+```
 3. Note "admin" is bydefault app created by django
 
 # Databas connectin with mysql
 1. atul@atul-Lenovo-G570:~$ sudo sudo apt-get insall python3.9-dev build-essential ###If you get error when install mysqlclient
 2. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ pip3 install mysqlclient ###install myssqlclient
-3. DATABASES = {
+```
+DATABASES = {
         'default': {  
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'django_vir_env1_proj',  
@@ -67,12 +69,16 @@ INSTALLED_APPS = [
         'HOST':'localhost',  
         'PORT':'3306'  
     } 
-} ###set in setting.py file to connect mysql database
+} 
+```
+
+3. set in setting.py file to connect mysql database
 
 # create templates in project root directory
 1. Create a templates directory in project root directory
 2. Now change the setting.py file for 
-3. TEMPLATES = [
+```
+TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'templates', ],
@@ -88,34 +94,36 @@ INSTALLED_APPS = [
     },
 ]
 
+```
 # crete static directory in project root directory
 1. create a static directory in project root directory
 2. Now change the setting.py file for
-3. STATICFILES_DIRS = [
+```
+ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-
+```
 
 # how to write models.py file to create table name without concatenate app name in database table
 1. use the meta 
+```
+from django.db import models 
 
-from django.db import models <br><br>
-
-class Person(models.Model): <br>
-    first_name = models.CharField(max_length=30)<br>
-    last_name = models.CharField(max_length=50)<br><br>
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=50)
     
-    class Meta:<br>
-      db_table = 'person'<br><br>
+    class Meta:
+      db_table = 'person'
       
-class Boys(models.Model):<br>
-    first_name = models.CharField(max_length=100)<br>
-    last_name = models.CharField(max_length=50)<br><br>
+class Boys(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=50)
     
-    class Meta:<br>
-      db_table = 'boys'<br>
-      app_label = 'myadmin'<br>
-
+    class Meta:
+      db_table = 'boys'
+      app_label = 'myadmin'
+```
 
 # How to organize models in a package if you have many models 
 1. delete models.py file
@@ -124,16 +132,16 @@ class Boys(models.Model):<br>
 4. create __init__.py file in models directory
 5. write code in __init_.py file to import your model file. (Example: from myadmin.models import country)
 6. now write code in modle file ##write below code in in country.py
+```
+from django.db import models
 
-from django.db import models<br><br>
-
-class Country(models.Model):<br>
-    id = models.BigAutoField(primary_key=True, default=None)<br>
-    country_name = models.CharField(max_length=255)<br><br>
+class Country(models.Model):
+    id = models.BigAutoField(primary_key=True, default=None)
+    country_name = models.CharField(max_length=255)
     
-    class Meta:<br>
-      db_table = 'country'<br>
-
+    class Meta:
+      db_table = 'country'
+```
 7. db_table is attribute of Meta class
 8. if you not use db_table then django automatically concatenate app name with table name in database like myadmin_country
 9. if you use db_table then you can create table name according to your need
@@ -143,17 +151,16 @@ class Country(models.Model):<br>
 1. create a model for state (state.py) in model directory
 2. write below code in state.py file
   ```
-   from django.db import models <br>
-   from myadmin.models import country <br><br>
+from django.db import models
+from myadmin.models import country
 
-   class State(models.Model):<br>
-     id = models.BigAutoField(primary_key=True, default=None)<br>
-     state_name = models.CharField(max_length=255)<br>
-     country_id = models.ForeignKey(country.Country,null=True,on_delete=models.SET_NULL,db_column='country_id')<br><br>
+class State(models.Model):
+    id = models.BigAutoField(primary_key=True, default=None)
+    state_name = models.CharField(max_length=255)
+    country_id = models.ForeignKey(country.Country,null=True,on_delete=models.SET_NULL,db_column='country_id')
     
-     class Meta:<br>
-       db_table = 'state'<br>
-       
+    class Meta:
+      db_table = 'state'
  ```
 2. when you create foreign key then django automatically add _id with column name 
 3. if you not use db_column then dajango create field with _id (example: country_id_id)
