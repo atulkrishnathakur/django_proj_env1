@@ -143,16 +143,16 @@ class Country(models.Model):<br>
 1. create a model for state (state.py) in model directory
 2. write below code in state.py file
 
-from django.db import models <br>
-from myadmin.models import country <br><br>
+   from django.db import models <br>
+   from myadmin.models import country <br><br>
 
-class State(models.Model):<br>
-    id = models.BigAutoField(primary_key=True, default=None)<br>
-    state_name = models.CharField(max_length=255)<br>
-    country_id = models.ForeignKey(country.Country,null=True,on_delete=models.SET_NULL,db_column='country_id')<br><br>
+   class State(models.Model):<br>
+     id = models.BigAutoField(primary_key=True, default=None)<br>
+     state_name = models.CharField(max_length=255)<br>
+     country_id = models.ForeignKey(country.Country,null=True,on_delete=models.SET_NULL,db_column='country_id')<br><br>
     
-    class Meta:<br>
-      db_table = 'state'<br>
+     class Meta:<br>
+       db_table = 'state'<br>
       
 2. when you create foreign key then django automatically add _id with column name 
 3. if you not use db_column then dajango create field with _id (example: country_id_id)
