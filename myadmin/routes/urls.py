@@ -10,5 +10,6 @@ urlpatterns = [
   path('shop-single', views.shopSingle, name='shopSingle'),
   path('add-country', country.addCountry, name='addCountry'),
   path('save-country', country.saveCountry, name='saveCountry'),
-  
+  path('country-list', country.countryList, name='countryList'),
+  path('edit-country/<int:id>', country.editCountry, name='editCountry'),
 ]

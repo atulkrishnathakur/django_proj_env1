@@ -1,0 +1,35 @@
+{% extends 'layouts/master.html' %}
+{% load static %}
+{% block title %}Zay Shop eCommerce HTML CSS Template{% endblock %}
+
+{% block contents %}
+{% include 'includes/top_nav.html' %}
+{% include 'includes/header.html' %}
+
+<div class="container">
+ <h1>Country List</h1>
+    <h4><a href="{% url 'addCountry' %}">Add Country</a></h4>
+
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Si. No.</th>
+        <th>Country Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+
+     {% for obj in all_countries %}
+	<tr>
+	  <td>{{ obj.id }}</td>
+	  <td>{{ obj.country_name }}</td>
+        <td> <a href="{% url 'editCountry' obj.id %}">Edit</a>, Delete</td>
+	</tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% include 'includes/footer.html' %}
+{% endblock %} 
