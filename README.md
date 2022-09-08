@@ -55,6 +55,8 @@ $ source django_vir_env1/bin/activate ###guest user can run <br>
 
 # Python Syntax Example
 1. create a file pythonSyntaxaExample.py in folder
+2. If you’ve been working in other programming languages such as Java, C#, or C/C++, you know that these languages use semicolons (;) to separate the statements. Python, however, uses whitespace and indentation to construct the code structure.
+
 ```
 # define main function to print out something
 def main():
@@ -67,9 +69,49 @@ def main():
 # call function main 
 main()
 ```
-2. run this file as below
+3. run this file as below
 ```
 (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj/corePython3.9$ python3.9 pythonSyntaxExample.py
+```
+
+# Continuation of statements
+
+1. Python uses a newline character to separate statements. It places each statement on one line. However, a long statement can span multiple lines by using the backslash (\) character. The following example illustrates how to use the backslash (\) character to continue a statement in the second line:
+
+```
+a = True
+b = False
+c = True
+# However, a long statement can span multiple lines by using the backslash (\) character.
+if (a == True) and (b == False) and \
+   (c == True):
+    print("Continuation of statements")
+
+```
+
+# Keywords
+
+1. Python provides a special module for listing its keywords called keyword. 
+2. To find the current keyword list, you use the following code:
+```
+import keyword
+
+print(keyword.kwlist)
+
+```
+3. run the file as below.
+```
+(django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj/corePython3.9$ python3.9 keywords.py
+
+```
+
+# Variable
+
+1. Syntax of variable
+
+```
+variable_name = value
+
 ```
 
 # How to create app 
