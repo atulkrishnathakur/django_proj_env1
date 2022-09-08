@@ -1,3 +1,4 @@
+
 # Django Virtual Environment Setup
 1. First, install python3.9-venv package by using the following command.<br>
 $ sudo apt-get install python3.9-venv  ###administrator user will run <br> 
@@ -36,6 +37,40 @@ $ source django_vir_env1/bin/activate ###guest user can run <br>
 3. click the profile icon from right top corner > setting > Developer Settings > personal access token > Generate new token ##set personal access token if token not set
 4. moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ git remote set-url origin https://ghp_qyPE2VCh8EqXlUkM7r0T2X@github.com/atulkrishnathakur/django_proj_env1.git ###set the token in url
 5. now you push your changes on github
+
+
+# print hello world 
+1. create a folder corePython3.9
+2. create helloworld.py in the folder
+
+```
+ print("Hello World")
+
+```
+2. run below command in terminal
+```
+ (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj/corePython3.9$ python3.9 helloworld.py
+
+```
+
+# Python Syntax Example
+1. create a file pythonSyntaxaExample.py in folder
+```
+# define main function to print out something
+def main():
+    i = 1
+    max = 10
+    while (i < max):
+        print(i)
+        i = i + 1
+
+# call function main 
+main()
+```
+2. run this file as below
+```
+(django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj/corePython3.9$ python3.9 pythonSyntaxExample.py
+```
 
 # How to create app 
 1. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ python3.9 manage.py startapp myadmin

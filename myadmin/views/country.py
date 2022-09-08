@@ -34,7 +34,7 @@ def countryList(request):
 
 def editCountry(request, id):
    if(request.method != 'POST'):
-    form = CountryEditForm()
+    form = CountryForm()
     template = loader.get_template('edit_country.html')
     countryObj = Country.objects.get(id=id)
     context = {
