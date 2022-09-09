@@ -188,6 +188,101 @@ str[0] = 'J'
 
 ```
 
+# Falsy and Truthy values
+1. When a value evaluates to True, it’s truthy. And if a value evaluates to False, it’s falsy.
+2. The following are falsy values in Python:
+3. The number zero (0)
+4. An empty string ''
+5. False
+6. None
+7. An empty list []
+8. An empty tuple ()
+9. An empty dictionary {}
+
+# Constants
+1. Python doesn’t support constants
+2. To work around this, you use all capital letters to name a variable to indicate that the variable should be treated as a constant. For example:
+```
+FILE_SIZE_LIMIT = 2000
+
+```
+
+# Python block comments
+1. To create a block comment, you start with a single hash sign (#) followed by a single space and a text string. For example:
+
+
+```
+# increase price by 5%
+price = price * 1.05
+
+```
+
+# Python inline comments
+1. When you place a comment on the same line as a statement, you’ll have an inline comment.
+2. Similar to a block comment, an inline comment begins with a single hash sign (#) and is followed by a space and a text string.
+
+```
+salary = salary * 1.02   # increase salary by 2%
+
+```
+
+# Python multiline comments
+1. Python doesn’t support multiline comments.
+
+
+# Docstrings
+1. learn docstring from https://www.pythontutorial.net/python-basics/python-comments/
+
+# Type Conversion
+
+```
+# type() function used to get type of variable or value
+data1 = "1000"
+print(type(data1))
+
+# string to int conversion
+data2 = "200"
+convertedData = int(data2)
+print(type(convertedData))
+
+# string to float conversion
+data2 = "200"
+print(data2)
+convertedData = float(data2)
+print(type(convertedData))
+
+# int to float
+data2 = 600
+convertedData = float(data2)
+print(convertedData)
+print(type(convertedData))
+
+# float to int
+data2 = 500.8956
+convertedData = int(data2)
+print(convertedData)
+print(type(convertedData))
+
+# int to string
+data2 = 650
+convertedData = str(data2)
+print(convertedData)
+print(type(convertedData))
+
+# float to string
+data2 = 850.52
+convertedData = str(data2)
+print(convertedData)
+print(type(convertedData))
+
+# string to bool
+data2 = "True"
+convertedData = bool(data2)
+print(convertedData)
+print(type(convertedData))
+
+```
+
 # How to create app 
 1. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ python3.9 manage.py startapp myadmin
 2. add "myadmin" app in setting.py file
