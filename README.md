@@ -283,6 +283,22 @@ print(type(convertedData))
 
 ```
 
+# input()
+
+```
+# input() function is used to read value from console or user
+# input() will read string type value
+
+age = input("Enter your age: ")
+if int(age) >= 18:
+    print("You're eligible to vote")
+
+
+```
+
+
+
+
 # How to create app 
 1. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ python3.9 manage.py startapp myadmin
 2. add "myadmin" app in setting.py file
