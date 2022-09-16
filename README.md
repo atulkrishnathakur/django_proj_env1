@@ -296,7 +296,9 @@ if int(age) >= 18:
 
 ```
 
+# Bitwise Operator
 
+1. https://www.geeksforgeeks.org/python-bitwise-operators/
 
 
 # How to create app 
