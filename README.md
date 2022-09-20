@@ -301,6 +301,82 @@ if int(age) >= 18:
 1. https://www.geeksforgeeks.org/python-bitwise-operators/
 
 
+# Ternary Operator
+1. The following syntax is called a ternary operator in Python:
+
+```
+value_if_true if condition else value_if_false
+
+```
+Example
+
+```
+ticket_price = 20 if int(age) >= 18 else 5
+
+```
+
+2. Python does not support following ternary operator syntax
+
+```
+condition ? value_if_true : value_if_false
+
+```
+
+# indentity operator
+
+```
+# ******** "is" Returns True if both variables are the same object **********
+
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+# returns True because z is the same object as x
+print(x is z)
+
+# returns False because x is not the same object as y, even if they have the same content
+print(x is y)
+
+# to demonstrate the difference betweeen "is" and "==": this comparison returns True because x is equal to y
+print(x == y)
+
+
+# ******** "is not" Returns True if both variables are not the same object *********
+
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+# returns False because z is the same object as x
+print(x is not z)
+
+# returns True because x is not the same object as y, even if they have the same content
+print(x is not y)
+
+# to demonstrate the difference betweeen "is not" and "!=": this comparison returns False because x is equal to y
+print(x != y)
+
+```
+
+# Membership Operator
+
+```
+# ****** "in" Returns True if a sequence with the specified value is present in the object
+
+x = ["apple", "banana"]
+
+# returns True because a sequence with the value "banana" is in the list
+print("banana" in x)
+
+# ****** "not in" Returns True if a sequence with the specified value is not present in the object
+x = ["apple", "banana"]
+
+# returns True because a sequence with the value "pineapple" is not in the list
+print("pineapple" not in x)
+
+
+```
+
 # How to create app 
 1. (django_vir_env1) moonjdoob@atul-Lenovo-G570:~/pythonprojects/mydjango/django_vir_env1_proj$ python3.9 manage.py startapp myadmin
 2. add "myadmin" app in setting.py file
